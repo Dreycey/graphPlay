@@ -6,9 +6,12 @@
 # using: https://gtpb.github.io/CPANG18/pages/toy_examples
 ####
 
-# use the tiny example
+# download vg repo
 if [[ ! -d vg/ ]]; then
   git clone https://github.com/vgteam/vg.git;
+fi
+# run examples
+if [[ ! -d exercise1 ]]; then
   mkdir exercise1;
   cd exercise1;
   ln -s ../vg/test/tiny;
