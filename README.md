@@ -1,12 +1,35 @@
 # graphPlay
 Playing around with graphs for the DNA code club.
 
-# Before anything, install vg
+# Before anything, install the following:
 * use the following through conda:
 ```
 conda install -c bioconda vg
 ```
 
+* install bandage for visualizing graph genomes:
+[Bandage Wesbite](https://rrwick.github.io/Bandage/)
+
+* install the AWS CLI
+```
+conda install -c conda-forge awscli
+```
+
+# HISAT
+aws s3 cp s3://genome-idx/bt/grch38_1kgmaj.zip .
+
+```
+export PATH=hisat-genotype-top:hisat-genotype-top/hisatgenotype_scripts:$PATH;
+export PYTHONPATH=hisat-genotype-top/hisatgenotype_modules:$PYTHONPATH;
+```
+
+OR
+
+```
+echo "export PATH=hisat-genotype-top:hisat-genotype-top/hisatgenotype_scripts:$PATH;" >> ~/.bashrc;
+echo "export PYTHONPATH=hisat-genotype-top/hisatgenotype_modules:$PYTHONPATH;" >> ~/.bashrc;
+source ~/.bashrc;
+```
 # download the vg git repo, for examples
 ```
 git clone https://github.com/vgteam/vg.git
