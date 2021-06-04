@@ -7,7 +7,7 @@
 ####
 
 # use the tiny example
-if [[ ! -d exercise1/ ]]; then
+if [[ ! -d vg/ ]]; then
   git clone https://github.com/vgteam/vg.git;
   mkdir exercise1;
   cd exercise1;
